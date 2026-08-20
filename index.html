@@ -5,6 +5,9 @@
     <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>AKEI iPhone</title>
+    <link rel="manifest" href="./manifest.json">
+<meta name="theme-color" content="#ffffff">
+<link rel="apple-touch-icon" href="./icon-192.png">
     <!-- The `react-native-web` recommended style reset: https://necolas.github.io/react-native-web/docs/setup/#root-element -->
     <style id="expo-reset">
       /* These styles make the body full-height */
@@ -33,5 +36,13 @@
     <!-- The root element for your Expo app. -->
     <div id="root"></div>
   <script src="/_expo/static/js/web/index-5d186b6bba71924a13bf6712a3a29e82.js" defer></script>
+    <script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./service-worker.js');
+  });
+}
+</script>
 </body>
 </html>
+
